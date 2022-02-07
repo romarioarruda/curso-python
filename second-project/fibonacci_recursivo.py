@@ -2,7 +2,8 @@
 
 # 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...
 
-def fibonacci(numeros=[0, 1], limite=100):
+def fibonacci(numeros=None, limite=100):
+    numeros = numeros or [0, 1]
     if numeros[-1] < limite:
         numeros.append(sum(numeros[-2:]))
 
@@ -12,6 +13,5 @@ def fibonacci(numeros=[0, 1], limite=100):
 
 
 if __name__ == "__main__":
-    resultado = fibonacci([0, 1], 100)
-    
-    print(resultado)
+    print(fibonacci([0, 1], 1000))
+    print(fibonacci())
