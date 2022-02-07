@@ -13,5 +13,5 @@ def soma_n_valores(*numeros):
 
 if __name__ == "__main__":
     # Unpacking é como o spread operator do JS
-    tupla = (1,2,3,4,5,6,7,8,9)
+    tupla = (1,2,3,4,5)
     print(soma_n_valores(*tupla))
