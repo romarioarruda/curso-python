@@ -15,4 +15,3 @@
 - Gerenciamento de pacotes
 - Isolamento de ambientes
 - Banco de dados
-- 
