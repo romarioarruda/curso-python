@@ -6,18 +6,26 @@ class Data:
 
     
     def full_date(self):
-        full_month = self.return_full_months(self.mes)
+        full_month = self._return_full_months(self.mes)
 
         return f'{self.dia} de {full_month} de {self.ano}'
     
     
-    def return_full_months(self, month_number):
+    # método "privado" seguindo a convenção do Python (basta começar com underline)
+    def _return_full_months(self, month_number):
         months = {
             1: 'Janeiro',
             2: 'Fevereiro',
             3: 'Março',
             4: 'Abril',
             5: 'Maio',
+            5: 'Junho',
+            5: 'Julho',
+            5: 'Agosto',
+            5: 'Setembro',
+            5: 'Outubro',
+            5: 'Novembro',
+            5: 'Dezembro',
         }
 
         return months.get(month_number, "** Mês não reconhecido **")
