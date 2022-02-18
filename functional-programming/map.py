@@ -7,15 +7,19 @@ alunos = [
     { "nome": "Alan Jorge", "nota": 5 }
 ]
 
-aprovados = lambda aluno: aluno if aluno['nota'] >= 7 else None
-reprovados = lambda aluno: aluno if aluno['nota'] < 7 else None
+def resultado(aluno):
+    aluno['aprovado'] = False
 
-lista_aprovados = list(map(aprovados, alunos))
-lista_reprovados = list(map(reprovados, alunos))
+    if aluno['nota'] >= 7:
+        aluno['aprovado'] = True
+        
+        return aluno
+    
+    return aluno
 
-if __name__ == '__main__':
-    print('Alunos aprovados:')
-    print(lista_aprovados)
-    print('\n')
-    print('Alunos reprovados:')
-    print(lista_reprovados)
+
+lista_aprovados = list(map(resultado, alunos))
+
+
+print('Resultado final:')
+print(lista_aprovados)
